@@ -40,12 +40,7 @@ document.addEventListener("DOMContentLoaded", function(){
     h6.appendChild(h6Text);
     div.appendChild(h6);
 
- 
 
-  
-    
-   
-  
    
    
    
