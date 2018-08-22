@@ -10,8 +10,28 @@ document.addEventListener("DOMContentLoaded", function(){
     let h2Text = document.createTextNode("This is an h2");
     h2.appendChild(h2Text);
 
+    let h3 = document.createElement('h3');
+    let h3Text = document.createTextNode("This is an h3");
+    h3.appendChild(h3Text);
+
+    let h4 = document.createElement('h4');
+    let h4Text = document.createTextNode("This is an h4");
+    h4.appendChild(h4Text);
+
+    let h5 = document.createElement('h5');
+    let h5Text = document.createTextNode("This is an h5");
+    h5.appendChild(h5Text);
+
+    let h6 = document.createElement('h6');
+    let h6Text = document.createTextNode("This is an h6");
+    h6.appendChild(h6Text);
+
     div1.appendChild(h1);
     div1.appendChild(h2);
+    div1.appendChild(h3);
+    div1.appendChild(h4);
+    div1.appendChild(h5);
+    div1.appendChild(h6);
     document.body.appendChild(div1);
 
    
