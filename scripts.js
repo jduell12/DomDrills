@@ -44,56 +44,51 @@ document.addEventListener("DOMContentLoaded", function () {
     let colors = ['red', 'orange', 'green', 'blue', 'purple', 'yellow', 'brown', 'white'];
 
     //Event Listeners that change the color of the headings text to a random color from the colors array when the heading is double clicked
-    h1.addEventListener('dblclick', function (){
+    h1.addEventListener('dblclick', function () {
         let randNum = Math.floor(Math.random() * colors.length);
         h1.style.color = colors[randNum];
     });
 
-    h2.addEventListener('dblclick', function (){
+    h2.addEventListener('dblclick', function () {
         let randNum = Math.floor(Math.random() * colors.length);
         h2.style.color = colors[randNum];
     });
 
-    h3.addEventListener('dblclick', function (){
+    h3.addEventListener('dblclick', function () {
         let randNum = Math.floor(Math.random() * colors.length);
         h3.style.color = colors[randNum];
     });
-    
-    h4.addEventListener('dblclick', function (){
+
+    h4.addEventListener('dblclick', function () {
         let randNum = Math.floor(Math.random() * colors.length);
         h4.style.color = colors[randNum];
     });
 
-    h5.addEventListener('dblclick', function (){
+    h5.addEventListener('dblclick', function () {
         let randNum = Math.floor(Math.random() * colors.length);
         h5.style.color = colors[randNum];
     });
 
-    h6.addEventListener('dblclick', function (){
+    h6.addEventListener('dblclick', function () {
         let randNum = Math.floor(Math.random() * colors.length);
         h6.style.color = colors[randNum];
     });
 
     let ul = document.createElement('ul');
-    let li = document.createElement('li');
+    document.body.appendChild(ul);
+    let btn = document.getElementsByTagName('button')[0];
+    let listNum = 1;
 
-    //function that inserts a list item
-    function listItem (i){
-        document.body.appendChild(ul);
-        for (i = 0; i < 100; i++){
-            if (i == 0){
-                let li1 = li.createTextNode("This is list item " + (i + 1));
-                li.appendChild(li1);
-                document.body.appendChild(li);
-            } else {
-                let liText = li.createTextNode("This is list item " + (i +1));
-                li.appendChild(liText);
-                document.body.appendChild(li);
-            }
-        }
-    };
+    //Event listener that lists an item everytime the button is clicked 
+    btn.addEventListener('click', function (){
+        let li = document.createElement('li');
+        let li1 = document.createTextNode("This is list item " + listNum);
+        li.appendChild(li1);
+        document.body.appendChild(li);
+        listNum++;
+    });
 
-
+     
 
 });
 
