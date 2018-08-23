@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function(){
-    
+document.addEventListener("DOMContentLoaded", function () {
+
     let div = document.createElement('div');
     div.className = "header-container";
     document.body.appendChild(div);
@@ -40,10 +40,43 @@ document.addEventListener("DOMContentLoaded", function(){
     h6.appendChild(h6Text);
     div.appendChild(h6);
 
+    //An array of 8 colors
+    let colors = ['red', 'orange', 'green', 'blue', 'purple', 'yellow', 'brown', 'white'];
+
+    h1.addEventListener('dblclick', function (){
+        let randNum = Math.floor(Math.random() * colors.length);
+        h1.style.color = colors[randNum];
+    });
+
+    h2.addEventListener('dblclick', function (){
+        let randNum = Math.floor(Math.random() * colors.length);
+        h2.style.color = colors[randNum];
+    });
+
+    h3.addEventListener('dblclick', function (){
+        let randNum = Math.floor(Math.random() * colors.length);
+        h3.style.color = colors[randNum];
+    });
+    
+    h4.addEventListener('dblclick', function (){
+        let randNum = Math.floor(Math.random() * colors.length);
+        h4.style.color = colors[randNum];
+    });
+
+    h5.addEventListener('dblclick', function (){
+        let randNum = Math.floor(Math.random() * colors.length);
+        h5.style.color = colors[randNum];
+    });
+
+    h6.addEventListener('dblclick', function (){
+        let randNum = Math.floor(Math.random() * colors.length);
+        h6.style.color = colors[randNum];
+    });
 
    
-   
-   
 
    
+
+
 });
+
