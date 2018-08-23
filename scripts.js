@@ -80,15 +80,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let listNum = 1;
 
     //Event listener that lists an item everytime the button is clicked 
-    btn.addEventListener('click', function (){
+    btn.addEventListener('click', function () {
         let li = document.createElement('li');
         let li1 = document.createTextNode("This is list item " + listNum);
         li.appendChild(li1);
         document.body.appendChild(li);
         listNum++;
+        //Event listener that changes the color of the font of a list item if it is clicked once. The font color chnages to one of the colors in the array colors at random
+        li.addEventListener('click', function () {
+            let randNum = Math.floor(Math.random() * colors.length);
+            li.style.color = colors[randNum];
+        })
     });
 
-     
+
 
 });
 
