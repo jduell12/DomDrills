@@ -74,9 +74,25 @@ document.addEventListener("DOMContentLoaded", function () {
         h6.style.color = colors[randNum];
     });
 
-   
+    let ul = document.createElement('ul');
+    let li = document.createElement('li');
 
-   
+    //function that inserts a list item
+    function listItem (i){
+        document.body.appendChild(ul);
+        for (i = 0; i < 100; i++){
+            if (i == 0){
+                let li1 = li.createTextNode("This is list item " + (i + 1));
+                li.appendChild(li1);
+                document.body.appendChild(li);
+            } else {
+                let liText = li.createTextNode("This is list item " + (i +1));
+                li.appendChild(liText);
+                document.body.appendChild(li);
+            }
+        }
+    };
+
 
 
 });
