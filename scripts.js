@@ -91,6 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
             let randNum = Math.floor(Math.random() * colors.length);
             li.style.color = colors[randNum];
         })
+        //Event listener that removes a list item if it is double clicked
+        li.addEventListener('dblclick', function(){
+            this.remove();
+        })
     });
 
 
