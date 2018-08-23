@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //An array of 8 colors
     let colors = ['red', 'orange', 'green', 'blue', 'purple', 'yellow', 'brown', 'white'];
 
+    //Event Listeners that change the color of the headings text to a random color from the colors array when the heading is double clicked
     h1.addEventListener('dblclick', function (){
         let randNum = Math.floor(Math.random() * colors.length);
         h1.style.color = colors[randNum];
